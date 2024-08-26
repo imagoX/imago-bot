@@ -1,0 +1,11 @@
+python-telegram-bot
+openai
+pytube
+pydub
+ffmpeg
+python-dotenv
+instaloader
+runware
+transformers
+fastapi
+uvicorn
