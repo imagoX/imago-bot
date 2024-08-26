@@ -8,7 +8,6 @@ from bot.utils.general_constants import ALLOWED_GROUP_IDS
 
 async def mute(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if update.effective_chat.id not in ALLOWED_GROUP_IDS:
-        await update.message.reply_text("این گروه، گروه تایپولوژی نیست.")
         return
 
     admin = update.effective_user

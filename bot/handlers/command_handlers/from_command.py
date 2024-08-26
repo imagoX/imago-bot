@@ -62,7 +62,6 @@ class ProgressUploader:
 
 async def from_command(update: Update, context: CallbackContext) -> None:
     if update.effective_chat.id not in ALLOWED_GROUP_IDS:
-        await update.message.reply_text("این گروه، گروه تایپولوژی نیست.")
         return
     
     if not update.message.reply_to_message or not update.message.reply_to_message.audio:

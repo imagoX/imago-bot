@@ -7,7 +7,6 @@ import logging
 
 async def pin_message(update: Update, context: CallbackContext) -> None:
     if update.effective_chat.id not in ALLOWED_GROUP_IDS:
-        await update.message.reply_text("این گروه، گروه تایپولوژی نیست.")
         return
 
     if not await is_user_admin(

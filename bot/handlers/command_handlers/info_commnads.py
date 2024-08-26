@@ -5,7 +5,6 @@ import logging
 
 async def get_admins(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if update.effective_chat.id not in ALLOWED_GROUP_IDS:
-        await update.message.reply_text("این گروه، گروه تایپولوژی نیست.")
         return
     try:
         admins = await context.bot.get_chat_administrators(update.effective_chat.id)
@@ -22,7 +21,6 @@ async def get_admins(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
 
 async def my_info(update: Update, context: CallbackContext) -> None:
     if update.effective_chat.id not in ALLOWED_GROUP_IDS:
-        await update.message.reply_text("این گروه، گروه تایپولوژی نیست.")
         return
     await update.message.reply_text(
         f"نام: {update.message.from_user.full_name}\n"

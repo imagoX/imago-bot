@@ -32,5 +32,4 @@ async def help(update: Update, context: CallbackContext) -> None:
     )
 
     if not is_allowed_group(update.message.chat.id):
-        await update.message.reply_text("غیر از اون، این گروه، گروه تایپولوژی نیست.")
         return

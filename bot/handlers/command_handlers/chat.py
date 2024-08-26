@@ -5,7 +5,6 @@ from bot.utils.general_constants import ALLOWED_GROUP_IDS
 
 async def chat(update: Update, context: CallbackContext) -> None:
     if update.effective_chat.id not in ALLOWED_GROUP_IDS:
-        await update.message.reply_text("این گروه، گروه تایپولوژی نیست.")
         return
 
     user_message = " ".join(context.args)
