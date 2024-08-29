@@ -161,8 +161,8 @@ config.py
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# llm
-llm/llama_3_1_8b/llama_3_1_8b_API.py
-llm/llama_3_1_8b/llama
-llm/llama_3_1_70b/llama_3_1_70b_API.py
-llm/llama_3_1_70b/llama
+# LLM
+llm/
+
+# Tests
+test/
