@@ -5,7 +5,7 @@ from bot.utils.general_functions import is_allowed_group
 async def help(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text(
         f"درود، {update.message.from_user.full_name}\n\n"
-        f"من Typology Bot v2.1 هستم.\n\n"
+        f"من Typology Bot v0.2.1 هستم.\n\n"
         f"برای استفاده، من را به گروه خود با دسترسی‌های معمولی ادمین "
         f"اضافه کنید، "
         f"در غیر این صورت، نمی‌توانم کار کنم.\n\n\n"

@@ -16,7 +16,7 @@ from bot.handlers.command_handlers.info_commnads import get_admins, my_info, cha
 from bot.handlers.command_handlers.report import report
 from bot.handlers.command_handlers.mute import mute
 from bot.handlers.command_handlers.unmute import unmute
-from bot.handlers.command_handlers.chat import chat
+# from bot.handlers.command_handlers.chat import chat
 from bot.handlers.command_handlers.ban import ban
 from bot.handlers.command_handlers.unban import unban
 from bot.handlers.command_handlers.delete import delete_message
@@ -26,7 +26,7 @@ from bot.handlers.command_handlers.unpin_all import unpin_all_messages
 from bot.handlers.command_handlers.help import help
 from bot.handlers.command_handlers.start import start
 from bot.handlers.command_handlers.from_command import from_command
-from bot.handlers.command_handlers.image_command import image_command
+# from bot.handlers.command_handlers.image_command import image_command
 
 from bot.handlers.message_handlers import greet_new_member, say_goodbye
 from misc import TELEGRAM_BOT_TOKEN, ADMIN_ID
@@ -77,11 +77,11 @@ async def start_application():
     application.add_handler(CommandHandler("admins", get_admins, filters=message_filter))
     application.add_handler(CommandHandler("me", my_info, filters=message_filter))
     application.add_handler(CommandHandler("chat_info", chat_info, filters=message_filter))
-    application.add_handler(CommandHandler("chat", chat, filters=message_filter))
+    # application.add_handler(CommandHandler("chat", chat, filters=message_filter))
     application.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND) & message_filter, handle_message))
     application.add_handler(MessageHandler(filters.Document.AUDIO | filters.AUDIO, handle_message))
     application.add_handler(CommandHandler("from", from_command))
-    application.add_handler(CommandHandler("image", image_command, filters=message_filter))
+    # application.add_handler(CommandHandler("image", image_command, filters=message_filter))
 
     application.add_handler(
         MessageHandler(
